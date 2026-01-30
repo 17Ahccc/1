@@ -1,0 +1,33 @@
+feature,importance,impact_percentage,category
+overall_avg_score,0.47094304849056884,47.094304849056876,Performance
+season,0.16994208669770425,16.994208669770423,Season/Time
+score_trend,0.10557856406750495,10.557856406750492,Performance
+score_consistency,0.09312575138716406,9.312575138716404,Performance
+age_squared,0.06484693100234112,6.484693100234111,Age
+age,0.05036836721772496,5.036836721772494,Age
+industry_Athlete,0.011541939557686379,1.1541939557686378,Industry/Profession
+industry_Fitness Instructor,0.007594262709070113,0.7594262709070111,Industry/Profession
+industry_Radio Personality,0.005953275812000773,0.5953275812000771,Industry/Profession
+industry_Musician,0.0037048689748344784,0.37048689748344776,Industry/Profession
+industry_Actor/Actress,0.00353109150666959,0.3531091506669589,Industry/Profession
+industry_Singer/Rapper,0.0034747197889005723,0.34747197889005715,Industry/Profession
+industry_Military,0.0028848747197725458,0.28848747197725455,Industry/Profession
+industry_Sports Broadcaster,0.0019575025761260716,0.19575025761260711,Industry/Profession
+industry_TV Personality,0.001756831327320267,0.17568313273202665,Industry/Profession
+industry_Social Media Personality,0.0011596475992070032,0.1159647599207003,Industry/Profession
+industry_Model,0.0008846754994076752,0.0884675499407675,Industry/Profession
+industry_Entrepreneur,0.0005972028400042779,0.059720284000427774,Industry/Profession
+industry_Conservationist,0.0001461313630321534,0.014613136303215339,Industry/Profession
+industry_Comedian,8.226862960039292e-06,0.000822686296003929,Industry/Profession
+industry_Astronaut,0.0,0.0,Industry/Profession
+industry_Beauty Pagent,0.0,0.0,Age
+industry_Con artist,0.0,0.0,Industry/Profession
+industry_Fashion Designer,0.0,0.0,Industry/Profession
+industry_Magician,0.0,0.0,Industry/Profession
+industry_Journalist,0.0,0.0,Industry/Profession
+industry_Racing Driver,0.0,0.0,Industry/Profession
+industry_News Anchor,0.0,0.0,Industry/Profession
+industry_Motivational Speaker,0.0,0.0,Industry/Profession
+industry_Producer,0.0,0.0,Industry/Profession
+industry_Politician,0.0,0.0,Industry/Profession
+industry_Social media personality,0.0,0.0,Industry/Profession
