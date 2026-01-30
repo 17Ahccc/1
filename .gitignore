@@ -1,0 +1,9 @@
+models/
+data/
+visualizations/
+reports/
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+*.pkl
+.DS_Store
