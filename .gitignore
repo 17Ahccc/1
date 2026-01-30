@@ -1,0 +1,16 @@
+# Output directories (not source code)
+/models/
+/data/
+/visualizations/
+/reports/
+
+# Python
+*.pyc
+__pycache__/
+.ipynb_checkpoints/
+
+# Model files
+*.pkl
+
+# System files
+.DS_Store
