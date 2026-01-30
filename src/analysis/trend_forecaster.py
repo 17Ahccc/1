@@ -128,14 +128,14 @@ class TrendForecaster:
         
         return model
     
-    def forecast_future(self, metric_name, periods=5, freq='Y'):
+    def forecast_future(self, metric_name, periods=5, freq='YE'):
         """
         Forecast future trends.
         
         Args:
             metric_name (str): Name of the metric to forecast
             periods (int): Number of periods to forecast
-            freq (str): Frequency ('Y' for yearly)
+            freq (str): Frequency ('YE' for year-end, 'Y' is deprecated)
             
         Returns:
             pd.DataFrame: Forecast dataframe
@@ -148,7 +148,7 @@ class TrendForecaster:
             return None
         
         # Create future dataframe
-        future = model.make_future_dataframe(periods=periods, freq='Y')
+        future = model.make_future_dataframe(periods=periods, freq='YE')
         
         # Generate forecast
         forecast = model.predict(future)
@@ -179,36 +179,35 @@ class TrendForecaster:
             print(f"Model or forecast for {metric_name} not available")
             return
         
-        # Create figure with subplots
-        fig = plt.figure(figsize=(14, 10))
-        
-        # Main forecast plot
-        ax1 = plt.subplot(2, 1, 1)
-        model.plot(forecast, ax=ax1)
-        ax1.set_title(f'Forecast: {metric_name}')
-        ax1.set_xlabel('Year')
-        ax1.set_ylabel(metric_name)
-        ax1.grid(True, alpha=0.3)
+        # Create main forecast plot
+        fig1 = model.plot(forecast)
+        ax = fig1.gca()
+        ax.set_title(f'Forecast: {metric_name}')
+        ax.set_xlabel('Year')
+        ax.set_ylabel(metric_name)
+        ax.grid(True, alpha=0.3)
         
         # Add vertical line for rule change (Season 28 ~ 2032)
         if 'season' in metric_name or 'fairness' in metric_name:
             rule_change_date = pd.to_datetime('2032-03-01')
-            ax1.axvline(x=rule_change_date, color='red', linestyle='--', 
+            ax.axvline(x=rule_change_date, color='red', linestyle='--', 
                        label='Rule Change (Season 28)', alpha=0.7)
-            ax1.legend()
+            ax.legend()
         
-        # Component plot
-        ax2 = plt.subplot(2, 1, 2)
-        model.plot_components(forecast, ax=ax2)
-        
-        plt.tight_layout()
-        
-        # Save plot
+        # Save main forecast plot
         safe_name = metric_name.replace(' ', '_').replace('/', '_')
         output_path = os.path.join(output_dir, f'forecast_{safe_name}.png')
-        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        plt.tight_layout()
+        fig1.savefig(output_path, dpi=300, bbox_inches='tight')
         print(f"Saved forecast plot to {output_path}")
-        plt.close()
+        plt.close(fig1)
+        
+        # Create component plot separately
+        fig2 = model.plot_components(forecast)
+        output_path2 = os.path.join(output_dir, f'forecast_{safe_name}_components.png')
+        fig2.savefig(output_path2, dpi=300, bbox_inches='tight')
+        print(f"Saved components plot to {output_path2}")
+        plt.close(fig2)
     
     def analyze_trend_changes(self, metric_name):
         """
