@@ -1,0 +1,27 @@
+industry,count,success_count,success_rate,avg_age,avg_placement
+Producer,1,1,1.0,35.0,2.0
+Motivational Speaker,1,1,1.0,33.0,3.0
+Social media personality,1,1,1.0,24.0,2.0
+Musician,1,1,1.0,31.0,2.0
+Military,1,1,1.0,22.0,3.0
+Fitness Instructor,1,1,1.0,34.0,3.0
+Conservationist,1,1,1.0,22.0,1.0
+Sports Broadcaster,2,1,0.5,39.0,6.5
+Racing Driver,4,2,0.5,37.25,5.0
+News Anchor,3,1,0.3333333333333333,46.666666666666664,8.0
+Athlete,95,27,0.28421052631578947,35.04210526315789,6.2631578947368425
+Singer/Rapper,61,16,0.26229508196721313,38.26229508196721,6.885245901639344
+Social Media Personality,8,2,0.25,23.5,5.375
+Radio Personality,4,1,0.25,40.75,8.25
+Actor/Actress,128,29,0.2265625,42.171875,6.75
+TV Personality,67,14,0.208955223880597,36.28358208955224,6.686567164179104
+Comedian,12,1,0.08333333333333333,51.25,8.75
+Model,17,1,0.058823529411764705,33.529411764705884,8.882352941176471
+Magician,1,0,0.0,53.0,12.0
+Beauty Pagent,1,0,0.0,28.0,10.0
+Entrepreneur,4,0,0.0,54.75,10.0
+Politician,3,0,0.0,58.666666666666664,10.333333333333334
+Astronaut,1,0,0.0,80.0,10.0
+Fashion Designer,1,0,0.0,72.0,10.0
+Journalist,1,0,0.0,72.0,12.0
+Con artist,1,0,0.0,33.0,12.0
